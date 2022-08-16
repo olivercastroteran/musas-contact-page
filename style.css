@@ -1,0 +1,6 @@
+*,
+*::after,
+*::before {
+  background-color: #2c476b;
+  color: #fff;
+}
