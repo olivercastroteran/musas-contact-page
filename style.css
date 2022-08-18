@@ -17,6 +17,7 @@
 
 html {
   font-size: 62.5%;
+  scroll-behavior: smooth;
 }
 
 ::selection {
@@ -108,9 +109,12 @@ body {
   background-image: linear-gradient(
       90deg,
       #4b4f58 0%,
-      rgba(75, 79, 88, 0.4) 65%
+      rgba(75, 79, 88, 0.3) 65%
     ),
     url(./assets/images/hero-bg.webp);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   padding: 11rem 7rem;
   display: flex;
   flex-direction: column;
@@ -137,12 +141,13 @@ h1 {
 
 .btn {
   max-width: 25rem;
+  text-align: center;
   flex-grow: 0;
   border-radius: 1.2rem;
   padding: 1rem 5rem;
   background-color: var(--color-cta);
   font-size: 2rem;
-  font-weight: 700;
+  font-weight: 600;
   text-decoration: none;
   color: var(--blue-dark-1);
   transition: all 0.3s;
@@ -155,6 +160,32 @@ h1 {
 
 .btn:active {
   transform: translateY(-1px);
+}
+
+.contactanos {
+  padding: 4.2rem;
+}
+
+h2 {
+  font-size: 2.5rem;
+  text-align: center;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  position: relative;
+}
+
+h2::after {
+  content: '';
+  position: absolute;
+  bottom: -1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 7.5rem;
+  height: 4px;
+  border-radius: 4px;
+  background-color: var(--blue-dark-1);
+  display: inline-block;
 }
 
 @keyframes moveInDot {
