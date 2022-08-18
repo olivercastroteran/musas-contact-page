@@ -10,8 +10,9 @@
 
 :root {
   --bg-white: #fff;
-  --blue-dark-1: #2c476b;
+  --blue-dark-1: #4a4e57;
   --color-cta: #fef7e5;
+  --color-grey-light-1: #d4d4d4;
 }
 
 html {
@@ -25,7 +26,6 @@ html {
 
 body {
   background-color: var(--bg-white);
-  background-color: #2c476b;
   color: var(--blue-dark-1);
   font-family: 'Inter', sans-serif;
 }
@@ -100,6 +100,61 @@ body {
 
 .logo img {
   width: 100%;
+}
+
+.hero-section {
+  width: 100%;
+  color: var(--bg-white);
+  background-image: linear-gradient(
+      90deg,
+      #4b4f58 0%,
+      rgba(75, 79, 88, 0.4) 65%
+    ),
+    url(./assets/images/hero-bg.webp);
+  padding: 11rem 7rem;
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
+}
+
+h1 {
+  font-size: 4.5rem;
+  letter-spacing: 3px;
+  font-weight: 600;
+}
+
+.hero-section ul {
+  margin-left: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.hero-section ul li {
+  font-size: 1.8rem;
+  color: var(--color-grey-light-1);
+}
+
+.btn {
+  max-width: 25rem;
+  flex-grow: 0;
+  border-radius: 1.2rem;
+  padding: 1rem 5rem;
+  background-color: var(--color-cta);
+  font-size: 2rem;
+  font-weight: 700;
+  text-decoration: none;
+  color: var(--blue-dark-1);
+  transition: all 0.3s;
+}
+
+.btn:hover {
+  background-color: var(--bg-white);
+  transform: translateY(-3px);
+}
+
+.btn:active {
+  transform: translateY(-1px);
 }
 
 @keyframes moveInDot {
