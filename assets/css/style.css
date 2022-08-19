@@ -46,6 +46,18 @@ ORDER: Base + Typography => General layout + Grid => Page Layout => Components
 html {
   font-size: 62.5%;
   scroll-behavior: smooth; }
+  @media only screen and (min-width: 100em) {
+    html {
+      font-size: 68.75%; } }
+  @media only screen and (max-width: 75em) {
+    html {
+      font-size: 56.25%; } }
+  @media only screen and (max-width: 56.25em) {
+    html {
+      font-size: 50%; } }
+  @media only screen and (max-width: 37.5em) {
+    html {
+      font-size: 45%; } }
 
 body {
   background-color: var(--bg-white);
@@ -118,6 +130,9 @@ h2::after {
   width: 100%;
   padding: 1rem;
   background-color: var(--bg-white); }
+  @media only screen and (max-width: 50em) {
+    .main-header {
+      padding: 2rem; } }
 
 .navbar {
   max-width: 90rem;
@@ -146,6 +161,9 @@ h2::after {
   text-decoration: none;
   color: var(--blue-dark-1);
   position: relative; }
+  @media only screen and (max-width: 50em) {
+    .link {
+      display: none; } }
 
 .link::after {
   content: '';
@@ -173,6 +191,10 @@ h2::after {
   margin-bottom: -8rem;
   border-radius: 50%;
   box-shadow: 6px 6px 12px rgba(0, 0, 0, 0.15); }
+  @media only screen and (max-width: 50em) {
+    .logo {
+      width: 10rem;
+      height: 10rem; } }
 
 .logo img {
   width: 100%; }
@@ -188,11 +210,21 @@ h2::after {
   display: flex;
   flex-direction: column;
   gap: 5rem; }
+  @media only screen and (max-width: 50em) {
+    .hero-section {
+      background-image: linear-gradient(90deg, #4b4f58 0%, rgba(75, 79, 88, 0.5) 65%), url(../../assets/images/hero-bg.webp); } }
+  @media only screen and (max-width: 37.5em) {
+    .hero-section {
+      padding: 10rem 4rem; } }
 
 h1 {
   font-size: 4.5rem;
   letter-spacing: 3px;
   font-weight: 600; }
+  @media only screen and (max-width: 50em) {
+    h1 {
+      font-size: 3.5rem;
+      letter-spacing: 2px; } }
 
 .hero-section ul {
   margin-left: 2rem;
@@ -215,6 +247,9 @@ h1 {
   align-items: center;
   justify-content: space-evenly;
   gap: 6rem; }
+  @media only screen and (max-width: 62.5em) {
+    .contactanos div {
+      flex-direction: column; } }
 
 .cake {
   display: block;

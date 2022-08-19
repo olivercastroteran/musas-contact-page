@@ -2,6 +2,10 @@
   width: 100%;
   padding: 1rem;
   background-color: var(--bg-white);
+
+  @include respond(tab-port-small) {
+    padding: 2rem;
+  }
 }
 
 .navbar {
@@ -34,6 +38,10 @@
   text-decoration: none;
   color: var(--blue-dark-1);
   position: relative;
+
+  @include respond(tab-port-small) {
+    display: none;
+  }
 }
 
 .link::after {
@@ -64,6 +72,11 @@
   margin-bottom: -8rem;
   border-radius: 50%;
   box-shadow: 6px 6px 12px rgba(0, 0, 0, 0.15);
+
+  @include respond(tab-port-small) {
+    width: 10rem;
+    height: 10rem;
+  }
 }
 
 .logo img {

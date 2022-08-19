@@ -18,6 +18,22 @@
 html {
   font-size: 62.5%;
   scroll-behavior: smooth;
+
+  @include respond(big-desktop) {
+    font-size: 68.75%; // 1rem = 11px - 11/16=.6875
+  }
+
+  @include respond(tab-land) {
+    font-size: 56.25%; // 1rem = 9px - 9/16=.5625
+  }
+
+  @include respond(tab-port) {
+    font-size: 50%; // 1rem = 8px - 8/16=.5
+  }
+
+  @include respond(phone) {
+    font-size: 45%;
+  }
 }
 
 body {
