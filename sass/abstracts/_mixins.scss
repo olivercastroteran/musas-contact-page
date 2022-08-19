@@ -1,0 +1,79 @@
+@mixin flexCenter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin absCenter {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@mixin centerBG {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+// Media Query Manager
+/*
+0-600px:      Phone
+600-900px:    Tablet portrait  
+900-1200px:   Tablet landscape  
+1200-1800px:  laptops - normal styles apply
+1800px +:     big desktops 
+$breackpoint argument choices:
+- phone
+- tab-port
+- tab-land
+- big-desktop
+ORDER: Base + Typography => General layout + Grid => Page Layout => Components
+1em = 16px
+*/
+
+@mixin respond($breackpoint) {
+  @if $breackpoint == phone-small {
+    @media only screen and (max-width: 31.25em) {
+      //500px
+      @content;
+    }
+  }
+  @if $breackpoint == phone {
+    @media only screen and (max-width: 37.5em) {
+      //600px
+      @content;
+    }
+  }
+  @if $breackpoint == tab-port-small {
+    @media only screen and (max-width: 50em) {
+      //800px
+      @content;
+    }
+  }
+  @if $breackpoint == tab-port {
+    @media only screen and (max-width: 56.25em) {
+      //900px
+      @content;
+    }
+  }
+  @if $breackpoint == tab-land-small {
+    @media only screen and (max-width: 62.5em) {
+      //1000px
+      @content;
+    }
+  }
+  @if $breackpoint == tab-land {
+    @media only screen and (max-width: 75em) {
+      // 1200px
+      @content;
+    }
+  }
+  @if $breackpoint == big-desktop {
+    @media only screen and (min-width: 100em) {
+      // 1800px
+      @content;
+    }
+  }
+}
