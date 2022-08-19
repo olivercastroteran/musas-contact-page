@@ -1,0 +1,53 @@
+.hero-section {
+  width: 100%;
+  color: var(--bg-white);
+  background-image: linear-gradient(
+      90deg,
+      #4b4f58 0%,
+      rgba(75, 79, 88, 0.35) 65%
+    ),
+    url(../../assets/images/hero-bg.webp);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 11rem 7rem;
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
+
+  @include respond(tab-port-small) {
+    background-image: linear-gradient(
+        90deg,
+        #4b4f58 0%,
+        rgba(75, 79, 88, 0.5) 65%
+      ),
+      url(../../assets/images/hero-bg.webp);
+  }
+
+  @include respond(phone) {
+    padding: 10rem 4rem;
+  }
+}
+
+h1 {
+  font-size: 4.5rem;
+  letter-spacing: 3px;
+  font-weight: 600;
+
+  @include respond(tab-port-small) {
+    font-size: 3.5rem;
+    letter-spacing: 2px;
+  }
+}
+
+.hero-section ul {
+  margin-left: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.hero-section ul li {
+  font-size: 1.8rem;
+  color: var(--color-grey-light-1);
+}

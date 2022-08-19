@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --bg-white: #fff;
+  --blue-dark-1: #4a4e57;
+  --color-cta: #fef7e5;
+  --color-grey-light-1: #d4d4d4;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+
+  @include respond(big-desktop) {
+    font-size: 68.75%; // 1rem = 11px - 11/16=.6875
+  }
+
+  @include respond(tab-land) {
+    font-size: 56.25%; // 1rem = 9px - 9/16=.5625
+  }
+
+  @include respond(tab-port) {
+    font-size: 50%; // 1rem = 8px - 8/16=.5
+  }
+
+  @include respond(phone) {
+    font-size: 45%;
+  }
+}
+
+body {
+  background-color: var(--bg-white);
+  color: var(--blue-dark-1);
+  font-family: 'Inter', sans-serif;
+}
+
+::selection {
+  background-color: var(--blue-dark-1);
+  color: var(--color-cta);
+}

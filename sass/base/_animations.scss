@@ -1,0 +1,22 @@
+@keyframes moveInDot {
+  0% {
+    opacity: 0.5;
+    transform: translateX(calc(-2.75rem - 50%));
+  }
+  25% {
+    opacity: 1;
+    transform: translateX(calc(0.75rem - 50%));
+  }
+  50% {
+    opacity: 1;
+    transform: translateX(calc(-0.5rem - 50%));
+  }
+  75% {
+    opacity: 1;
+    transform: translateX(calc(0.5rem - 50%));
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(calc(0 - 50%));
+  }
+}
