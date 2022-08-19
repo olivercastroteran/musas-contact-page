@@ -1,0 +1,41 @@
+h2 {
+  font-size: 2.5rem;
+  text-align: center;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-bottom: 7rem;
+  position: relative;
+}
+
+h2::after {
+  content: '';
+  position: absolute;
+  bottom: -1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 7.5rem;
+  height: 4px;
+  border-radius: 4px;
+  background-color: var(--blue-dark-1);
+  display: inline-block;
+}
+
+.subtitle {
+  font-size: 1.8rem;
+  position: relative;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+}
+
+.subtitle::after {
+  content: '';
+  position: absolute;
+  bottom: -0.5rem;
+  left: 0;
+  width: 5rem;
+  height: 1px;
+  border-radius: 1px;
+  background-color: var(--bg-white);
+  display: inline-block;
+}
